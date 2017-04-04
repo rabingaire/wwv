@@ -128,12 +128,33 @@ var Main = React.createClass({
   showReview() {
   	if (this.state.position == 2) {
   		return (
-  			<div>
-  				<h1>Review</h1>
-  				<h3>Item To Buy: {this.state.item_to_buy}</h3>
-  				<h4>Budget: {this.state.budget}</h4>
-  				<h4>Department: {this.state.department}</h4>
-  				<h5>Comment from Account Department: {this.state.comment}</h5>
+  			<div className="container">
+    			<div className="row">
+      			<div className="col-md-6">
+            	<legend>Review System</legend>
+          		
+            	<table className="table table-bordered">
+						    <tbody>
+						      <tr>
+						      	<td>Item To Buy</td>
+						        <td>{this.state.item_to_buy}</td>
+						      </tr>
+						      <tr>
+						      	<td>Budget</td>
+						        <td>{this.state.budget}</td>
+						      </tr>
+						      <tr>
+						      	<td>Department</td>
+						        <td>{this.state.department}</td>
+						      </tr>
+						      <tr>
+						      	<td>Comment from Account Department</td>
+						        <td>{this.state.comment}</td>
+						      </tr>
+						    </tbody>
+						  </table>
+		  			</div>
+          </div>	
   			</div>
   		)
   	}
