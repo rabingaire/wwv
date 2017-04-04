@@ -85,13 +85,41 @@ var Main = React.createClass({
   showPrRequest() {
   	if(this.state.position == 1) {
   		return (
-  			<div>
-  				<hr/>
-  				<h4>PR created by {this.state.manager} of department {this.state.department}</h4>
-  				<h4>On the title of {this.state.title}</h4>
-  				<h3>To buy {this.state.item_to_buy} at budget of {this.state.budget}</h3>
-  				<input type="text" name="comment" placeholder="comment" onChange={this.onClickForm} />
-  				<button onClick={this.handleClick}>Approve</button>
+  			<div className="container">
+    			<div className="row">
+      			<div className="col-md-6">
+            	<legend>Finance Department Review System</legend>
+          		
+            	<table className="table table-bordered">
+						    <tbody>
+						      <tr>
+						        <td>PR created by {this.state.manager} of department {this.state.department}</td>
+						      </tr>
+						      <tr>
+						        <td>On the title of {this.state.title}</td>
+						      </tr>
+						      <tr>
+						        <td>To buy {this.state.item_to_buy} at budget of {this.state.budget}</td>
+						      </tr>
+						    </tbody>
+						  </table>
+
+            	<div className="form-group">
+                <label className="col-sm-2 control-label" htmlFor="textinput">Comment</label>
+                <div className="col-sm-10">
+                  <input type="text" className="form-control" name="comment" placeholder="comment" onChange={this.onClickForm} />
+                </div>
+              </div>
+
+              <div className="form-group">
+              	<div className="col-sm-offset-2 col-sm-10">
+                	<div className="pull-right">
+                  	<button type="submit" className="btn btn-primary" onClick={this.handleClick}>Approve</button>
+                 	</div>
+               	</div>
+             	</div>
+            </div>
+          </div>
   			</div>
   		)
   	}
