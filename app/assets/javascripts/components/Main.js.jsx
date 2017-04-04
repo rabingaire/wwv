@@ -27,16 +27,56 @@ var Main = React.createClass({
   prRequestForm() {
   	if(this.state.position == 0) {
   		return(
-  			<div>
-	        <h2>Purchase Request Form Fill Up</h2>
-	        <hr/>
-	        <h5>Please fill form for the PR you are requesting.</h5>
-	        <input type="text" name="title" placeholder="title" onChange={this.onClickForm}/>
-	        <input type="text" name="department" placeholder="department" onChange={this.onClickForm}/>
-	        <input type="text" name="manager" placeholder="manager" onChange={this.onClickForm}/>
-	        <input type="text" name="item_to_buy" placeholder="item to buy" onChange={this.onClickForm}/>
-	        <input type="text" name="budget" placeholder="budget" onChange={this.onClickForm}/>
-	        <button onClick={this.handleClick}>Submit</button>
+  			<div className="container">
+    			<div className="row">
+      			<div className="col-md-6">
+            	<legend>Purchase Request Form Fill Up</legend>
+
+          		<p>Please fill form for the PR you are requesting.</p>
+            	<div className="form-group">
+              	<label className="col-sm-3 control-label" htmlFor="textinput">Title</label>
+              	<div className="col-sm-9">
+                	<input type="text" className="form-control" name="title" placeholder="title" onChange={this.onClickForm}/>
+              	</div>
+            	</div>
+
+              <div className="form-group">
+                <label className="col-sm-3 control-label" htmlFor="textinput">Department</label>
+                <div className="col-sm-9">
+                  <input type="text" className="form-control" name="department" placeholder="department" onChange={this.onClickForm}/>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="col-sm-3 control-label" htmlFor="textinput">Manager</label>
+                <div className="col-sm-9">
+                  <input type="text" className="form-control" name="manager" placeholder="manager" onChange={this.onClickForm}/>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="col-sm-3 control-label" htmlFor="textinput">Item to buy</label>
+                <div className="col-sm-9">
+                  <input type="text" className="form-control" name="item_to_buy" placeholder="item to buy" onChange={this.onClickForm}/>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label className="col-sm-3 control-label" htmlFor="textinput">Estimated Budget</label>
+                <div className="col-sm-9">
+                  <input type="number" className="form-control" name="budget" placeholder="budget" onChange={this.onClickForm}/>
+                </div>
+              </div>
+
+             	<div className="form-group">
+              	<div className="col-sm-offset-2 col-sm-10">
+                	<div className="pull-right">
+                  	<button type="submit" className="btn btn-primary" onClick={this.handleClick}>Submit</button>
+                 	</div>
+               	</div>
+             	</div>
+            </div>
+          </div>
 	      </div>
   		)
   	}
